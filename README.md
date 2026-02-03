@@ -1,16 +1,45 @@
-# campo_minado
+💣 Campo Minado - Flutter & Dart
+Um projeto de jogo de Campo Minado clássico, desenvolvido com Flutter para dispositivos mobile. O foco deste projeto é aplicar conceitos de lógica de programação, orientação a objetos e tratamento de exceções customizadas em Dart.
 
-A new Flutter project.
+⚠️ Status do Projeto: Em construção 🏗️
 
-## Getting Started
+🚀 O que já foi implementado
+Modelo de Dados (Campo): Lógica inicial para identificação de vizinhos e posicionamento em grade (linha/coluna).
 
-This project is a starting point for a Flutter application.
+Tratamento de Erros: Criação da ExplosionException para gerenciar o estado de derrota quando o usuário clica em uma bomba.
 
-A few resources to get you started if this is your first Flutter project:
+Configuração de Ambiente: Projeto configurado para rodar em dispositivos Android através do Flutter SDK.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🛠️ Tecnologias Utilizadas
+Dart: Linguagem principal para a lógica de negócio.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter: Framework para a interface de usuário (UI).
+
+Android Studio: Ambiente de desenvolvimento (IDE).
+
+📋 Próximos Passos (Roadmap)
+[ ] Implementar a lógica de abrir um campo e expansão automática de vizinhos vazios.
+
+[ ] Criar o tabuleiro dinâmico que gera minas aleatoriamente.
+
+[ ] Desenvolver a interface visual com GridView e ícones.
+
+[ ] Adicionar contador de bombas restantes.
+
+⚙️ Como rodar o projeto
+Para rodar este projeto localmente, você precisará do Flutter instalado em sua máquina.
+
+Clone o repositório:
+
+Bash
+git clone https://github.com/seu-usuario/campo-minado.git
+Navegue até a pasta do projeto e baixe as dependências:
+
+Bash
+flutter pub get
+Inicie o emulador (ou conecte seu celular) e execute:
+
+Bash
+flutter run
+📝 Licença
+Este projeto está sob a licença MIT.
