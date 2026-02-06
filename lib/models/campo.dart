@@ -38,16 +38,59 @@ class Campo {
       _explodido = true;
       throw ExplosionException();
     }
-    if (vizinhacaSegura) {
+    if (vizinhancaSegura) {
       vizinhos.forEach((v) => v.abrir());
     }
+  }
+
+  void minar () {
+    _minado = true;
   }
 
   bool get minado {
     return _minado;
   }
 
-  bool get vizinhacaSegura {
-    return vizinhos.every((v) => !v._minado);
+  bool get explodido {
+    return _explodido;
+  }
+
+  bool get aberto {
+    return _aberto;
+  }
+
+  bool get marcado {
+    return _marcado;
+  }
+
+  bool get resolvido {
+    bool minadoEMarcado = minado && marcado;
+    bool seguroEAberto = !minado && aberto;
+    return minadoEMarcado || seguroEAberto;
+  }
+
+  void revelarBombas() {
+    if (_minado) {
+      _aberto = true;
+  }
+}
+  void alternarMarcacao() {
+    _marcado = !_marcado;
+  }
+
+  void reiniciar () {
+    _aberto = false;
+    _marcado = false;
+    _minado = false;
+    _explodido = false;
+
+  }
+
+  bool get vizinhancaSegura {
+    return vizinhos.every((v) => !v.minado);
+  }
+
+  int get qtdeMinasNaVizinhaca {
+    return vizinhos.where((v) => v.minado).length;
   }
 }
